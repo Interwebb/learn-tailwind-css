@@ -1,9 +1,59 @@
+import { Card, CardIcon, ServiceCard } from "@/components";
 import Image from "next/image";
+import PhoneIcon from "@heroicons/react/24/outline/PhoneIcon";
+import InboxIcon from "@heroicons/react/24/outline/InboxIcon";
+import ShieldCheckIcon from "@heroicons/react/24/outline/ShieldCheckIcon";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <main className="w-screen flex flex-col gap-8 bg-gradient-to-br from-zinc-900 to-slate-900 min-h-screen">
+      <div className="grid p-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 container mx-auto">
+        <div>
+          <h1 className="heading-text">Do more with more of your data.</h1>
+        </div>
+
+        <ServiceCard
+          title={"Service 1"}
+          description={
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem quam qui laudantium vel, possimus repellendus assumenda ."
+          }
+          Icon={PhoneIcon}
+        />
+        <ServiceCard
+          title={"Service 2"}
+          description={
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem quam qui laudantium vel, possimus repellendus assumenda ."
+          }
+          Icon={InboxIcon}
+        />
+        <ServiceCard
+          title={"Service 3"}
+          description={
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem quam qui laudantium vel, possimus repellendus assumenda ."
+          }
+          Icon={ShieldCheckIcon}
+        />
+        <ServiceCard
+          title={"Service 3"}
+          description={
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem quam qui laudantium vel, possimus repellendus assumenda ."
+          }
+          Icon={ShieldCheckIcon}
+        />
+        <ServiceCard
+          title={"Service 3"}
+          description={
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem quam qui laudantium vel, possimus repellendus assumenda ."
+          }
+          Icon={ShieldCheckIcon}
+        />
+      </div>
+    </main>
+  );
+}
+
+/* 
+  <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -96,6 +146,4 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-    </div>
-  );
-}
+*/
